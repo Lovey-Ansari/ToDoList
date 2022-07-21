@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  height: 100vh;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleCont {
+  margin-left: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+.title {
+  background-color: transparent;
+  color: white;
+  height: 4.5rem;
+}
+.toggle-button {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.toggle-button:hover {
+  transform: scale(1.25);
+}
+
+.themeToggle {
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 16%,
+    hsl(315deg 100% 27%) 41%,
+    hsl(329deg 100% 36%) 61%,
+    hsl(337deg 100% 43%) 75%,
+    hsl(357deg 91% 59%) 85%,
+    hsl(17deg 100% 59%) 91%,
+    hsl(34deg 100% 53%) 95%,
+    hsl(45deg 100% 50%) 98%,
+    hsl(55deg 100% 50%) 100%
+  );
+  background-size: 50% contain;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+form {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.todo-input {
+  font-size: 1rem;
+  border: none;
+  padding: 0.85rem;
+  border: none;
+
+  width: 25rem;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  border-radius: 5px;
+}
+
+.todo-input::placeholder {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.todo-button {
+  border: none;
+  cursor: pointer;
+  height: 2.89rem;
+  width: 2rem;
+  font-size: 1.5rem;
+  background-color: rgb(40, 40, 40);
+  color: black;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  margin-left: 0.25rem;
+}
+
+.todo-button:hover {
+  background-color: black;
+  color: rgb(40, 40, 40);
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 20%;
+  color: grey;
+  list-style: none;
+}
+
+.darkTodo {
+  padding: 0.25rem;
+  margin: 0.5rem;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.darkTodo li {
+  flex: 1;
+  margin-left: 1rem;
+  line-height: 22px;
+}
+
+.delete-btn,
+.checked-btn {
+  border-radius: 10px;
+  width: 2rem;
+  border: none;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+}
+
+.delete-btn:hover {
+  background-color: white;
+  color: red;
+}
+
+.checked-btn {
+  background-color: green;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.checked-btn:hover {
+  background-color: white;
+  color: green;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: 0.25s;
+}
+
+.transition {
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+
+.select {
+  margin: 1rem;
+  height: 2.88rem;
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: auto;
+  position: relative;
+  bottom: 8rem;
+}
+
+.all {
+  width: 3rem;
+  height: 2.88rem;
+  background-color: rgb(40, 40, 40);
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+}
+
+.complete {
+  width: 6.5rem;
+  height: 2.88rem;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+}
+
+.incomplete {
+  width: 7.5rem;
+  height: 2.88rem;
+  background-color: rgb(40, 40, 40);
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+  border: none;
+}
+
+.all:hover {
+  transform: scale(1.2);
+}
+
+.complete:hover {
+  transform: scale(1.2);
+}
+
+.incomplete:hover {
+  transform: scale(1.2);
+}
+
+.filterBtnEffect {
+  background-color: white;
+  color: black;
+}
+
+/* -------------------------------------------------LIGHT THEME-----------------------------------------------------------------*/
+.lightBody {
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 16%,
+    hsl(315deg 100% 27%) 41%,
+    hsl(329deg 100% 36%) 61%,
+    hsl(337deg 100% 43%) 75%,
+    hsl(357deg 91% 59%) 85%,
+    hsl(17deg 100% 59%) 91%,
+    hsl(34deg 100% 53%) 95%,
+    hsl(45deg 100% 50%) 98%,
+    hsl(55deg 100% 50%) 100%
+  );
+  background-repeat: no-repeat;
+}
+.light {
+  color: black;
+}
+
+.themeToggleLight {
+  color: black;
+}
+
+.lightTitleCont {
+  background-image: linear-gradient(
+    35deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(262deg 77% 90%) 17%,
+    hsl(262deg 78% 79%) 33%,
+    hsl(262deg 78% 69%) 50%,
+    hsl(262deg 78% 58%) 67%,
+    hsl(262deg 78% 48%) 83%,
+    hsl(262deg 78% 37%) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lightInput {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffe694;
+  color: black;
+}
+
+.lightTodoButton {
+  background-color: #ffe694;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.lightTodoButton:hover {
+  background-color: white;
+  color: #ffe694;
+}
+
+.lightFilterBtn {
+  background-color: white;
+  color: black;
+}
+
+.filterBtnEffect2 {
+  background-color: black;
+  color: white;
+}
+
+.lightTodo {
+  padding: 0.25rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffe694;
+  color: black;
+  border-radius: 10px;
+}
+
+.lightTodo li {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 412px) {
+  .titleCont,
+  .lightTitleCont {
+    margin-left: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .todo-input,
+  .lightInput {
+    width: 15rem;
+  }
+
+  .todo-input::placeholder {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  .darkTodo,
+  .lightTodo {
+    width: 18rem;
+  }
+}
